@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="/saveData.php" method="GET" target="_self" autocomplete="off">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">Name</label> <br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          required
+          minlength="5"
+          autofocus
+        />
+        <br />
+
+        <label for="address">Address</label> <br />
+        <textarea type="text" id="address" name="address"></textarea> <br />
+
+        <label>Male</label> <input type="radio" name="gender" />
+        <label>Female</label> <input type="radio" name="gender" /> <br />
+
+        <label for="dob">DOB</label> <br />
+        <input type="hidden" id="dob" name="dob" /> <br />
+
+        <br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Other Information</legend>
+        Select Hobbies <br />
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="cricket" />
+
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="reading" /> <br />
+
+        Select Company
+        <select name="company">
+          <option value="CTB">CitiBank</option>
+          <option value="IFS">Infosys</option>
+          <option value="TCS">TCS</option>
+        </select>
+        <br />
+        Select City
+        <label for="city">Name</label> <br />
+        <input
+          placeholder="Your city"
+          list="listOfCities"
+          type="text"
+          id="city"
+          name="city"
+        />
+        <br />
+        <datalist id="listOfCities">
+          <option value="Pune"></option>
+          <option value="Mumbai"></option>
+          <option value="Hyderabad"></option>
+        </datalist>
+        <br />
+        Percentage
+        <input type="number" required min="0" max="100" step="3" />
+      </fieldset>
+      <br />
+      <br />
+      <button type="submit">Save</button> |
+      <button type="reset">Cancel</button> |
+      <button type="button" onclick="alert('Something')">Dummy</button>
+    </form>
+  </body>
+</html>
