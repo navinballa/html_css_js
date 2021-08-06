@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Registration Form</h2>
+    <form action="/saveData.php" method="GET" target="_self" autocomplete="off">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fname">Name</label> <br />
+        <input type="text" id="fname" name="fname" /> <br />
+
+        <label for="address">Address</label> <br />
+        <textarea type="text" id="address" name="address"></textarea> <br />
+
+        <label>Male</label> <input type="radio" name="gender" />
+        <label>Female</label> <input type="radio" name="gender" /> <br />
+        <br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Other Information</legend>
+        Select Hobbies <br />
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="cricket" />
+
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="reading" /> <br />
+
+        Select Company
+        <select name="company">
+          <option value="CTB">CitiBank</option>
+          <option value="IFS">Infosys</option>
+          <option value="TCS">TCS</option>
+        </select>
+        <br />
+        Select City
+        <label for="city">Name</label> <br />
+        <input list="listOfCities" type="text" id="city" name="city" /> <br />
+        <datalist id="listOfCities">
+          <option value="Pune"></option>
+          <option value="Mumbai"></option>
+          <option value="Hyderabad"></option>
+        </datalist>
+      </fieldset>
+      <br />
+      <br />
+      <button type="submit">Save</button> |
+      <button type="reset">Cancel</button> |
+      <button type="button" onclick="alert('Something')">Dummy</button>
+    </form>
+  </body>
+</html>
